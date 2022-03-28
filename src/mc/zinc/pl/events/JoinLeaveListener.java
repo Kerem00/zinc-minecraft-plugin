@@ -26,6 +26,8 @@ public class JoinLeaveListener implements Listener
             display_name = ChatColor.translateAlternateColorCodes('&', "&7[&cOwner&7] &4") + player.getName() + ChatColor.GRAY;
         else if (Simple.is_vip(player.getName()))
             display_name = ChatColor.translateAlternateColorCodes('&', "&7[&6VIP&7] &6") + player.getName() + ChatColor.GRAY;
+        else
+            display_name = ChatColor.DARK_AQUA + player.getName() + ChatColor.GRAY;
 
         player.setDisplayName(display_name);
         player.setPlayerListName(display_name);
