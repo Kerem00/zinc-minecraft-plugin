@@ -14,6 +14,6 @@ public class PlayerDeathListener implements Listener
     public void onPlayerDeath(PlayerDeathEvent event)
     {
         Location loc = event.getEntity().getPlayer().getLocation();
-        event.getEntity().getPlayer().sendMessage(pl_name + "En son ölünen nokta: " + loc.getBlockX() + ", " + loc.getBlockY() + ", " + loc.getBlockZ() + ".");
+        event.getEntity().getPlayer().sendMessage(pl_name + "Last location: " + loc.getBlockX() + ", " + loc.getBlockY() + ", " + loc.getBlockZ() + ".");
     }
 }

@@ -20,7 +20,7 @@ public class Heal implements CommandExecutor
             {
                 if (args.length == 0)
                 {
-                    player.sendMessage(pl_name + "İyileştirildiniz ve açlığınız yenilendi.");
+                    player.sendMessage(pl_name + "You were healed.");
                     player.setHealth(20.0);
                     player.setFoodLevel(20);
                     player.setFireTicks(0);
@@ -34,8 +34,8 @@ public class Heal implements CommandExecutor
                         if (p.getName().equals(args[0]))
                         {
                             is_online = true;
-                            p.sendMessage(pl_name + player.getDisplayName() + " tarafından iyileştirildiniz.");
-                            player.sendMessage(pl_name + p.getDisplayName() + " iyileştirildi.");
+                            p.sendMessage("You were healed by " + pl_name + player.getDisplayName() + ".");
+                            player.sendMessage(pl_name + p.getDisplayName() + " was healed.");
                             p.setHealth(20.0);
                             p.setFoodLevel(20);
                             p.setFireTicks(0);

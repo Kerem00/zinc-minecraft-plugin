@@ -34,7 +34,7 @@ public class Simple
             writer.write(db.toJSONString());
             writer.close();
         }
-        catch (IOException e) { System.out.println("[Warning] can't write to users.json."); }
+        catch (IOException e) { System.out.println("[Warning] Can't write to users.json."); }
     }
 
     public static boolean is_vip(String name)

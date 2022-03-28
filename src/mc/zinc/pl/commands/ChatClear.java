@@ -22,7 +22,7 @@ public class ChatClear implements CommandExecutor
                 for (Player p : Bukkit.getOnlinePlayers())
                 { for (int i = 0; i < 100; i++) p.sendMessage(""); }
 
-                Bukkit.broadcastMessage(pl_name + player.getDisplayName() + " sohbeti temizledi.");
+                Bukkit.broadcastMessage(pl_name + player.getDisplayName() + " cleared the chat.");
             }
             else player.sendMessage(ChatColor.translateAlternateColorCodes('&', pl_name + "&cYou don't have permission for this command!"));
         }

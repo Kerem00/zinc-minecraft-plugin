@@ -1,4 +1,4 @@
-//   Zinc - Minecraft plugin for server moderation. 
+//   Zinc - Minecraft plugin for server moderation.
 //   Copyright (C) 2022  Kerem Biçen
 
 //   This program is free software: you can redistribute it and/or modify
@@ -18,6 +18,7 @@ package mc.zinc.pl;
 
 import mc.zinc.pl.commands.ChatClear;
 import mc.zinc.pl.commands.Heal;
+import mc.zinc.pl.events.ChatListener;
 import mc.zinc.pl.events.JoinLeaveListener;
 import mc.zinc.pl.events.PlayerDeathListener;
 import org.bukkit.Bukkit;
@@ -45,6 +46,7 @@ public class Main extends JavaPlugin
         this.getCommand("clearchat").setExecutor(new ChatClear());
 
         pm.registerEvents(new JoinLeaveListener(), this);
+        pm.registerEvents(new ChatListener(), this);
         pm.registerEvents(new PlayerDeathListener(), this);
 
         console.sendMessage(pl_name + "Enabled.");
