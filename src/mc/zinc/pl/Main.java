@@ -16,7 +16,6 @@
 
 package mc.zinc.pl;
 
-
 import mc.zinc.pl.commands.ChatClear;
 import mc.zinc.pl.commands.Heal;
 import mc.zinc.pl.events.JoinLeaveListener;
