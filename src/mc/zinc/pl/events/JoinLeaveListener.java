@@ -18,20 +18,13 @@ public class JoinLeaveListener implements Listener
 
         if (player.getName().contains(" ")) event.getPlayer().kickPlayer("Please don't use space character in your name!");
 
-        if (!player.hasPlayedBefore())
-        {
-            Simple.createNew(event.getPlayer().getName());
-        }
+        if (!player.hasPlayedBefore()) Simple.createNew(event.getPlayer().getName());
 
         String display_name = "";
         if (player.isOp())
-        {
             display_name = ChatColor.translateAlternateColorCodes('&', "&7[&cOwner&7] &4") + player.getName() + ChatColor.GRAY;
-        }
         else if (Simple.is_vip(player.getName()))
-        {
             display_name = ChatColor.translateAlternateColorCodes('&', "&7[&6VIP&7] &6") + player.getName() + ChatColor.GRAY;
-        }
 
         player.setDisplayName(display_name);
         player.setPlayerListName(display_name);
