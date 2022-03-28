@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 public class JoinLeaveListener implements Listener
 {
@@ -28,5 +29,13 @@ public class JoinLeaveListener implements Listener
 
         player.setDisplayName(display_name);
         player.setPlayerListName(display_name);
+        event.setJoinMessage(pl_name + player.getDisplayName() + ChatColor.AQUA + " has joined.");
+    }
+
+    @EventHandler
+    public void onLeave(PlayerQuitEvent event)
+    {
+        Player player = event.getPlayer();
+        event.setQuitMessage(pl_name + player.getDisplayName() + ChatColor.AQUA + " has left.");
     }
 }
