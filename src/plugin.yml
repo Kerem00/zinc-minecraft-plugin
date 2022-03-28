@@ -1,0 +1,31 @@
+name: Zinc
+version: 1.0
+main: mc.zinc.pl.Main
+description: Zinc System
+api-version: 1.17
+
+commands:
+  heal:
+    usage: /<command>
+  fly:
+    usage: /<command>
+  clearchat:
+    usage: /<command>
+  mute:
+    usage: /<command>
+  unmute:
+    usage: /<command>
+  cc:
+    usage: /<command>
+  rank:
+    usage: /<command>
+  privatechat:
+    usage: /<command>
+  money:
+    usage: /<command>
+  kit:
+    usage: /<command>
+  disg:
+    usage: /<command>
+  undisg:
+    usage: /<command>
