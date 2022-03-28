@@ -22,7 +22,7 @@ public class CC implements CommandExecutor
                 if (args.length != 0)
                 {
                     Simple.set_cc(player.getName(), args[0]);
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', pl_name + "Your new chat color is " + Simple.get_cc(player.getName()) + "█"));
+                    player.sendMessage(pl_name + "Your new chat color is " + Simple.get_cc(player.getName()) + "█");
                 }
             }
             else player.sendMessage(ChatColor.translateAlternateColorCodes('&', pl_name + "&cYou don't have permission for this command!"));

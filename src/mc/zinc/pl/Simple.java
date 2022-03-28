@@ -67,11 +67,24 @@ public class Simple
 
     public static ChatColor get_cc(String name)
     {
-        return ChatColor.GRAY;
+        JSONObject db = get_db();
+
+        if (((JSONObject) db.get(name)).get("chatcolor").equals("red"))
+            return ChatColor.RED;
+        else if (((JSONObject) db.get(name)).get("chatcolor").equals("gold"))
+            return ChatColor.GOLD;
+        else if (((JSONObject) db.get(name)).get("chatcolor").equals("aqua"))
+            return ChatColor.AQUA;
+        else
+            return ChatColor.GRAY;
     }
 
     public static void set_cc(String name, String color)
     {
+        JSONObject db = get_db();
 
+        ((JSONObject) db.get(name)).replace("chatcolor", color);
+
+        set_db(db);
     }
 }
