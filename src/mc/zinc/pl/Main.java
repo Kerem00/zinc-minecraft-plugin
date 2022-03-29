@@ -16,10 +16,8 @@
 
 package mc.zinc.pl;
 
-import mc.zinc.pl.commands.CC;
-import mc.zinc.pl.commands.ChatClear;
-import mc.zinc.pl.commands.Heal;
-import mc.zinc.pl.commands.SetRank;
+import mc.zinc.pl.commands.*;
+import mc.zinc.pl.events.BreakPlaceListener;
 import mc.zinc.pl.events.ChatListener;
 import mc.zinc.pl.events.JoinLeaveListener;
 import mc.zinc.pl.events.PlayerDeathListener;
@@ -47,10 +45,12 @@ public class Main extends JavaPlugin
         this.getCommand("heal").setExecutor(new Heal());
         this.getCommand("clearchat").setExecutor(new ChatClear());
         this.getCommand("cc").setExecutor(new CC());
+        this.getCommand("fly").setExecutor(new Fly());
         this.getCommand("rank").setExecutor(new SetRank());
 
         pm.registerEvents(new JoinLeaveListener(), this);
         pm.registerEvents(new ChatListener(), this);
+        pm.registerEvents(new BreakPlaceListener(), this);
         pm.registerEvents(new PlayerDeathListener(), this);
 
         console.sendMessage(pl_name + "Enabled.");

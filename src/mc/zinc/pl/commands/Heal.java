@@ -10,10 +10,10 @@ import org.bukkit.entity.Player;
 
 public class Heal implements CommandExecutor
 {
-    String pl_name = ChatColor.translateAlternateColorCodes('&', "&7[&bZinc&7]&a ");
-
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
+        String pl_name = ChatColor.translateAlternateColorCodes('&', "&7[&bZinc&7]&a ");
+
         if (sender instanceof Player player)
         {
             if (player.isOp())
