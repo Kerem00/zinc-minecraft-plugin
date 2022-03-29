@@ -12,17 +12,13 @@ public class BreakPlaceListener implements Listener
     public void onBreak(BlockBreakEvent event)
     {
         if (!event.getPlayer().isOp())
-        {
             event.setCancelled(true);
-        }
     }
 
     @EventHandler
     public void onPlace(BlockPlaceEvent event)
     {
         if (!event.getPlayer().isOp())
-        {
             event.setCancelled(true);
-        }
     }
 }
