@@ -21,6 +21,7 @@ public class SetRank implements CommandExecutor
             {
                 if (args.length == 2)
                 {
+                    Simple.set_cc(args[0], "default");
                     Simple.set_vip(args[0], args[1].equals("vip"));
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', pl_name + args[0] + " is now " + args[1] + "."));
                 }
