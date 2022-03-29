@@ -43,7 +43,7 @@ public class Heal implements CommandExecutor
                         }
                     }
 
-                    if (!is_online) player.sendMessage(pl_name + "Oyuncu bulunamadı.");
+                    if (!is_online) player.sendMessage(pl_name + "Can't find the player.");
                 }
             }
             else player.sendMessage(ChatColor.translateAlternateColorCodes('&', pl_name + "&cYou don't have permission for this command!"));
