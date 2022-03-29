@@ -17,10 +17,7 @@
 package mc.zinc.pl;
 
 import mc.zinc.pl.commands.*;
-import mc.zinc.pl.events.BreakPlaceListener;
-import mc.zinc.pl.events.ChatListener;
-import mc.zinc.pl.events.JoinLeaveListener;
-import mc.zinc.pl.events.PlayerDeathListener;
+import mc.zinc.pl.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
