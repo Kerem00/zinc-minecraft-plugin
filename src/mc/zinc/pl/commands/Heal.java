@@ -34,7 +34,7 @@ public class Heal implements CommandExecutor
                         if (p.getName().equals(args[0]))
                         {
                             is_online = true;
-                            p.sendMessage("You were healed by " + pl_name + player.getDisplayName() + ".");
+                            p.sendMessage(pl_name + "You were healed by " + player.getDisplayName() + ".");
                             player.sendMessage(pl_name + p.getDisplayName() + " was healed.");
                             p.setHealth(20.0);
                             p.setFoodLevel(20);
