@@ -69,6 +69,7 @@ public class Simple
     {
         JSONObject db = get_db();
 
+	// todo: switch statement
         if (((JSONObject) db.get(name)).get("chatcolor").equals("red"))
             return ChatColor.RED;
         else if (((JSONObject) db.get(name)).get("chatcolor").equals("gold"))
