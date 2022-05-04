@@ -83,7 +83,8 @@ public class Simple
     public static ChatColor get_cc(String name)
     {
         JSONObject db = get_db();
-
+        
+        // todo: more colors
         return switch ((String) ((JSONObject) db.get(name)).get("chatcolor"))
         {
             case "red" -> ChatColor.RED;
