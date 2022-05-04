@@ -69,15 +69,13 @@ public class Simple
     {
         JSONObject db = get_db();
 
-		// todo: switch statement
-        if (((JSONObject) db.get(name)).get("chatcolor").equals("red"))
-            return ChatColor.RED;
-        else if (((JSONObject) db.get(name)).get("chatcolor").equals("gold"))
-            return ChatColor.GOLD;
-        else if (((JSONObject) db.get(name)).get("chatcolor").equals("aqua"))
-            return ChatColor.AQUA;
-        else
-            return ChatColor.GRAY;
+        return switch ((String) ((JSONObject) db.get(name)).get("chatcolor"))
+        {
+            case "red" -> ChatColor.RED;
+            case "gold" -> ChatColor.GOLD;
+            case "aqua" -> ChatColor.AQUA;
+            default -> ChatColor.GRAY;
+        };
     }
 
     public static void set_cc(String name, String color)
